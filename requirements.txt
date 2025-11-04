@@ -1,0 +1,5 @@
+tensorflow==2.x.x 
+streamlit
+numpy
+pandas
+Pillow

@@ -1,17 +1,12 @@
-# streamlit_app.py
-
 import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
 import os
 
-# Definisikan parameter yang sama seperti saat training
 IMG_SIZE = 224 # [cite: 27, 28]
 NUM_CLASSES = 3 # [cite: 30]
 MODEL_NAME = 'EfficientNetB6' # [cite: 66]
-
-# --- Fungsi untuk Memuat Model dan Memprediksi ---
 
 @st.cache_resource
 def load_model():
@@ -66,5 +61,6 @@ def main():
 
         st.success(f"**Hasil Prediksi:** {predicted_class}")
         st.info(f"**Tingkat Keyakinan (Confidence):** {confidence:.2f}%")
+
 
 main()
